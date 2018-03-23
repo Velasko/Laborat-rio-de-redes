@@ -2,7 +2,6 @@
 
 import socket as sk
 import requests as req
-import os
 
 def questao1():
 
