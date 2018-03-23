@@ -11,8 +11,8 @@ def questao1():
     username = os.getlogin()
     print("{}@{}\n  IP da máquina:{}".format(username, hostname, local_ip))
 
-    #varredura de portas de 0 até 999
-    for porta in range(1000):
+    #varredura de portas de 0 até 9999
+    for porta in range(10000):
 
 ##        Caso OSError seja levantado, ao tentar definir as variaveis tcp e udp,
 ##        significa que nao sao utilizados naquela porta. Caso isto ocorra,
