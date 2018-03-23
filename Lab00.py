@@ -15,7 +15,7 @@ if __name__ == "__main__":
              "si3.ufc.br",              #7
              "python.org",              #8
              "store.playstation.com",   #9
-             
+             "github.com",              #10
              )
 
     for host in hosts:
