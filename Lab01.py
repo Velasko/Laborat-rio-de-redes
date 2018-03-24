@@ -69,7 +69,7 @@ def questao1():
 ##        else: ambos sao nulos, implicando que a porta nao faz uso de nenhum dos dois protocolos.
 
         if tcp and udp:
-            print("    {0:<2}\tserviço: {1:<10}\tprotocolo: TCP/UDP".format(porta, tcp[1]))
+            print("    {0:<2}\tserviço: {1:<10}\tprotocolo: TCP/UDP".format(porta, tcp))
         elif tcp:
             print("    {0:<2}\tserviço: {1:<10}\tprotocolo: TCP".format(porta, tcp))
         elif udp:
