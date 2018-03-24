@@ -32,7 +32,7 @@ def questao1():
 
     print("{}Execução da questão 1{}".format(bolt_in, bolt_out))
 
-    #descobrindo hostname, iplocal e nome de usuario
+    #descobrindo hostname, ip local, ip global e nome de usuario
     hostname = sk.gethostname()
 
     local_ip = getlocalip(hostname)
