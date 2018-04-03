@@ -1,3 +1,9 @@
+"""Código para entrega do dia 04/04/2018 de Redes de Computadores I.
+Dupla:
+     Felipe Araújo Magalhães - 378599
+     Luís Filipe Velasco da Silva - 390193
+"""
+
 #!/usr/bin/python3
 
 import socket as sk
@@ -39,7 +45,8 @@ def questao1():
     global_ip = getglobalip()
 
     username = os.getlogin()
-    print("{}@{}\n  IP local: {}\n  IP global:{}".format(username, hostname, local_ip, global_ip))
+    print("{}@{}\n  IP local: {}\n  IP global:{}".format(username, hostname,
+                                                         local_ip, global_ip))
 
     #varredura de portas de 0 até 9999
     for porta in range(10000):
@@ -69,11 +76,11 @@ def questao1():
 ##        else: ambos sao nulos, implicando que a porta nao faz uso de nenhum dos dois protocolos.
 
         if tcp and udp:
-            print("    {0:<2}\tserviço: {1:<10}\tprotocolo: TCP/UDP".format(porta, tcp))
+            print("    {0:<4} serviço: {1:<15}\tprotocolo: TCP/UDP".format(porta, tcp))
         elif tcp:
-            print("    {0:<2}\tserviço: {1:<10}\tprotocolo: TCP".format(porta, tcp))
+            print("    {0:<4} serviço: {1:<15}\tprotocolo: TCP".format(porta, tcp))
         elif udp:
-            print("    {0:<2}\tserviço: {1:<10}\tprotocolo: UDP".format(porta, udp))
+            print("    {0:<4} serviço: {1:<15}\tprotocolo: UDP".format(porta, udp))
 
     print("{}Fim da execução da primeira questão{}\n".format(bolt_in, bolt_out))
 
@@ -100,10 +107,10 @@ def questao2():
     for link in links:
         #link_ip = sk.gethostbyname(link) #Descobrindo o ip de um link
         dados = req.get( base_link.format(link) ).json()
-        print(link)
-        print("\tIP:\t{}\n\tPaís:\t{}\n\tRegião:\t{}\n".format(dados["ip"],
-                                                             dados["country_name"],
-                                                             dados["region_name"]))
+        print("{}\n\tIP:\t{}\n\tPaís:\t{}\n\tRegião:\t{}\n".format(link,
+                                                                 dados["ip"],
+                                                                 dados["country_name"],
+                                                                 dados["region_name"]))
 
     print("{}Fim da execução da segunda questão{}\n".format(bolt_in, bolt_out))
 
